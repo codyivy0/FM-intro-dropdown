@@ -15,13 +15,16 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 header {
     box-sizing: border-box;
     height: 4rem;
-    padding: 1rem;
+    padding: 2rem;
+    width: 100%;
 }
 
 nav {
@@ -29,35 +32,36 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-
 }
 
 .desktop-nav {
     display: none;
 }
-main{
+.login{
+    display: none;
+}
+
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
+
+picture {
+    height: 100%;
+    width: 100%;
+}
+
 #hero {
-    width: 100%; 
-    flex: 1;   
+    width: 100%;
+    height: 100%;
+    flex: 1;
 }
-@media (min-width:50em) {
-    #hero{
-        content: url(./images/image-hero-desktop.png);
-    }
-    main{
-        display: flex;
-        flex-direction: row-reverse;
-        width: 75%;
-        justify-content: center;
-        align-items: center;
-    }
-}
-.content{
+
+.content {
     flex: 1;
     padding: .75rem;
     display: flex;
@@ -65,25 +69,32 @@ main{
     text-align: center;
     justify-content: center;
 }
-.content h1{
+
+.content h1 {
     margin-bottom: 0;
 }
-.content p{
+
+.content p {
     text-align: center;
     color: var(--neutral-medium-gray);
-    
+    ;
 }
-.content button{
+
+.content button {
     color: white;
     background-color: black;
     width: 35%;
-    height: 2rem;
+    height: 2.5rem;
     border: none;
-    border-radius: 7px;
+    border-radius: 9px;
     align-self: center;
     margin-bottom: 2rem;
 }
-#clients{
+.content button:hover{
+    cursor: pointer;
+}
+
+#clients {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,11 +102,94 @@ main{
     box-sizing: border-box;
     margin-bottom: 4rem;
 }
-#clients img{
-    width: 20%;
-    height: 20%;
+
+#clients img {
+    width: 4rem;
+    height: 2rem;
 }
-#clients img:nth-child(2){
-    width: 15%;
-    height: 20%;
+
+@media (min-width:50em) {
+    #hero {
+        content: url(./images/image-hero-desktop.png);
+        width: 90%;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-items: center;
+        height: 100%;
+        color: var(--neutral-medium-gray);
+    }
+    .desktop-nav {
+        display: flex;
+        gap: 2rem;
+        font-size: .9rem;
+    }
+    nav *:hover{ 
+        cursor: pointer;
+    }
+    .nav-link{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .login  {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+    #register{
+        border: 2px solid var(--neutral-medium-gray);
+        padding: 1rem;
+        padding-inline: 1.5rem;
+        border-radius: 20px;
+    }
+    .mobile-menu{
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 70vh;
+        margin-top: 3rem;
+        gap: 9rem;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .content h1{
+        font-size: 4rem;
+    }
+
+    .content p {
+        text-align: left;
+        padding-right: 6rem;
+    }
+
+    #clients {
+        margin-bottom: 0;
+        justify-content: start;
+        gap: 2rem;
+    }
+    #clients img {
+        width: 6rem;
+        height: 1.5rem;
+    }
+
+    .content button {
+        align-self: flex-start;
+        width: 9rem;
+    }
 }
