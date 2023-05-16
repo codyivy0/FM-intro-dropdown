@@ -151,7 +151,13 @@ picture {
     text-align: center;
     gap: 1rem;
   }
-  #register {
+  #m-register {
+    border: 2px solid var(--neutral-medium-gray);
+    padding: 1rem;
+    padding-inline: 1.5rem;
+    border-radius: 20px;
+}
+.register {
     border: 2px solid var(--neutral-medium-gray);
     padding: 1rem;
     padding-inline: 1.5rem;
@@ -302,10 +308,10 @@ picture {
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
-        width: 80%;
-        height: 70vh;
+        width: 85%;
+        height: 75vh;
         margin-top: 3rem;
-        gap: 9rem;
+        gap: 10rem;
     }
 
     .content {
@@ -317,7 +323,7 @@ picture {
     }
 
     .content h1 {
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
 
     .content p {
